@@ -17,13 +17,13 @@ public class ApplicationConfig extends AbstractMongoClientConfiguration {
 
     @Override
     protected String getDatabaseName() {
-        return "mygrocerylist";
+        return "library";
     }
 
     @Override
     public MongoClient mongoClient() {
 
-        ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/mygrocerylist");
+        ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/library");
 
         MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
@@ -34,6 +34,6 @@ public class ApplicationConfig extends AbstractMongoClientConfiguration {
 
     @Override
     protected Collection<String> getMappingBasePackages() {
-        return Collections.singleton("com.bachinalabs.mongodemo");
+        return Collections.singleton("crud.crud");
     }
 }

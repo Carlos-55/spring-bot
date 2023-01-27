@@ -6,19 +6,18 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "todos")
+@Document(collection = "users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Todos {
+public class Users {
 
     @Id
     private String id;
-    private String name;
-    private String description;
-    private String createdDate;
-    private String createdBy;
-    private String updatedDate;
-    private String updatedBy;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
+    private String phoneNumber;
 
 }
